@@ -1,0 +1,22 @@
+@startuml
+actor "Khách hàng" as Customer
+actor "Kỹ thuật viên" as Technician
+actor "Ngân hàng" as Bank
+
+rectangle ATM {
+  Customer --> (Đăng nhập)
+  Customer --> (Rút tiền)
+  Customer --> (Nạp tiền)
+  Customer --> (Chuyển khoản)
+  Customer --> (Xem số dư)
+
+  Technician --> (Bảo trì ATM)
+
+  (Đăng nhập) --> Bank
+  (Rút tiền) --> Bank
+  (Nạp tiền) --> Bank
+  (Chuyển khoản) --> Bank
+  (Xem số dư) --> Bank
+}
+@enduml
+
