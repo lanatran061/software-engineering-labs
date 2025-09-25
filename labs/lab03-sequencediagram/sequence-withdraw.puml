@@ -1,0 +1,19 @@
+@startuml
+actor KhachHang
+participant ATM
+participant NganHang
+participant TaiKhoan
+
+KhachHang -> ATM: Đưa thẻ, nhập PIN
+ATM -> NganHang: Xác thực PIN
+NganHang --> ATM: Kết quả xác thực
+
+KhachHang -> ATM: Chọn "Rút tiền"
+KhachHang -> ATM: Nhập số tiền
+ATM -> NganHang: Yêu cầu kiểm tra số dư
+NganHang -> TaiKhoan: Kiểm tra số dư
+TaiKhoan --> NganHang: Kết quả số dư
+NganHang --> ATM: Xác nhận đủ tiền
+ATM -> TaiKhoan: Trừ số dư
+ATM --> KhachHang: Nhả tiền + In biên lai
+@enduml
