@@ -1,0 +1,26 @@
+@startuml
+package "UI" {
+  class LoginForm
+  class WithdrawForm
+  class Display
+}
+
+package "Controller" {
+  class ATMController
+}
+
+package "BankService" {
+  class AuthService
+  class TransactionService
+}
+
+package "Hardware" {
+  class CardReader
+  class CashDispenser
+  class Printer
+}
+
+UI ..> Controller
+Controller ..> BankService
+Controller ..> Hardware
+@enduml
