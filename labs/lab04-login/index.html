@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="info-security">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Nhập username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Nhập password">
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Login</button>
+                <button id="cancel" type="button" onclick="cancelLogin()">Cancel</button>
+            </div>
+
+            <div class="remember">
+                <label for="remember">Remember me</label>
+                <input type="checkbox" id="remember">
+            </div>
+
+
+        </form>
+        <p id="errorMsg"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
